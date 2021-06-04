@@ -1,0 +1,270 @@
+/*
+-----------------------------------------------------------------------
+    Donate CSS
+-----------------------------------------------------------------------
+*/
+.donate-area {
+  &.donate-default-area {
+    overflow: hidden;
+    padding: 105px 0 104px;
+    @media #{$lg-device} {
+      padding: 100px 0;
+    }
+    @media #{$sm-device} {
+      padding: 80px 0;
+    }
+    .section-title {
+      margin-bottom: 90px;
+      margin-top: 73px;
+      @media #{$md-device} {
+        margin-bottom: 70px;
+        margin-top: 0;
+        text-align: center;
+      }
+      .title {
+        &.title-style {
+          .img-shape {
+            @include translate(-60%, -47%);
+            @media #{$lg-device} {
+              @include translate(-80%, -50%);
+            }
+            @media #{$md-device} {
+              @include translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+    .donate-form {
+      position: relative;
+      z-index: 0;
+      &:before {
+        background-color: #08242a;
+        border-radius: 50%;
+        content: "";
+        height: 724px;
+        left: -512px;
+        position: absolute;
+        top: -236px;
+        width: 724px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.donate-form {
+  form {
+    .amount-info {
+      display: flex;
+      margin-bottom: 50px;
+      @media #{$md-device} {
+        justify-content: center;
+      }
+      @media #{$xxs-device} {
+        display: block;
+      }
+      .donate-amount {
+        border: 2px solid #203438;
+        color: $white;
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        height: 58px;
+        line-height: 58px;
+        margin-right: 20px;
+        min-width: 95px;
+        text-align: center;
+        @include transition(.3s);
+        @media #{$lg-device} {
+          min-width: 80px;
+          margin-right: 10px;
+        }
+        @media #{$xxs-device} {
+          min-width: auto;
+          margin-right: 0;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+        &:hover, &.active {
+          border-color: $theme-color;
+          cursor: pointer;
+        }
+        &.donate-custom-amount {
+          max-width: 180px;
+          min-width: 180px;
+          margin-right: 0;
+          @media #{$xxs-device} {
+            width: 100%;
+            max-width: none;
+            min-width: auto;
+          }
+          .form-control {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            color: $white;
+            font-size: 18px;
+            font-weight: $font-weight-semi-bold;
+            height: 58px;
+            padding: 2px 0px;
+            text-align: center;
+            @include placeholder {
+              color: $white;
+              font-size: 18px;
+              font-weight: $font-weight-bold;
+            }
+          }
+        }
+      }
+    }
+    .btn-gradient {
+      &.btn-border {
+        border-color: #203438;
+        &:after {
+          border: 1px solid #203438;;
+          border-radius: 32.5px;
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          @include transition(.1s);
+        }
+        &:hover {
+          border-color: $theme-color2;
+          &:after {
+            border: none;
+          }
+        }
+      }
+    }
+    .btn-wrp {
+      display: flex;
+      @media #{$md-device} {
+        justify-content: center;
+      }
+      @media #{$xxs-device} {
+        display: block;
+        text-align: center;
+      }
+      .btn-theme {
+        margin-left: 20px;
+        @media #{$xxs-device} {
+          margin-left: 0;
+          text-align: left;
+          vertical-align: middle;
+        }
+        &:first-child {
+          margin-left: 0;
+          @media #{$xxs-device} {
+            margin-right: 10px;
+            margin-bottom: 0;
+          }
+          @media (max-width:443.98px) {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.donners-content {
+  .thumb-bg-layer {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 336px;
+    position: absolute;
+    right: 0;
+    width: calc(50% - 215px);
+    @media #{$xl-device} {
+      min-height: 300px;
+      width: calc(50% - 115px);
+    }
+    @media #{$lg-device} {
+      min-height: 240px;
+      width: calc(50% - 96px);
+    }
+    @media #{$md-device} {
+      margin-top: 70px;
+      min-height: 300px;
+      position: relative;
+      width: auto;
+    }
+    @media #{$sm-device} {
+      min-height: 240px;
+    }
+  }
+  .donners-info {
+    padding-top: 400px;
+    @media #{$xl-device} {
+      padding-top: 350px;
+    }
+    @media #{$lg-device} {
+      padding-top: 290px;
+    }
+    @media #{$md-device} {
+      padding-top: 40px;
+    }
+  }
+}
+
+.donners-info {
+  @media #{$md-device} {
+    text-align: center;
+  }
+  h3 {
+    color: $white;
+    font-size: 40px;
+    margin-bottom: 22px;
+    @media #{$md-device} {
+      font-size: 30px;
+    }
+  }
+  p {
+    color: #838383;
+    margin-bottom: 32px;
+    margin-right: -125px;
+    @media (max-width:1499px) {
+      margin-right: 0;
+    }
+  }
+  .donners-item {
+    display: flex;
+    @media #{$md-device} {
+      justify-content: center;
+    }
+    .donner-item {
+      background-color: #13373e;
+      border-radius: 50%;
+      height: 80px;
+      margin-right: 16px;
+      padding: 4px;
+      width: 80px;
+      @media #{$xxs-device} {
+        width: 60px;
+        height: 60px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        border-radius: 50%;
+      }
+      &.donner-number {
+        color: $white;
+        font-size: 20px;
+        font-family: $font-current-theme2;
+        line-height: 74px;
+        text-align: center;
+        @include gradient-bg();
+        @media #{$xxs-device} {
+          line-height: 55px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

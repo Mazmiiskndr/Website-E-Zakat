@@ -1,0 +1,272 @@
+/*
+-----------------------------------------------------------------------
+	About CSS
+-----------------------------------------------------------------------
+*/
+.about-area {
+  &.about-default-area {
+    padding: 146px 0 15px;
+    position: relative;
+    @media #{$md-device} {
+      padding: 15px 0;
+    }
+    &:before {
+      background-color: $white-f7;
+      bottom: 0;
+      content: "";
+      height: calc(100% + 225px);
+      left: 0;
+      position: absolute;
+      width: calc(50% - 126px);
+      z-index: -1;
+      @media #{$md-device} {
+        bottom: auto;
+        height: 50%;
+        top: -65px;
+      }
+    }
+    .section-title {
+      margin-bottom: 24px;
+      @media #{$xxs-device} {
+        text-align: center;
+      }
+    }
+  }
+  .layer-style {
+    margin-top: 52px;
+    position: relative;
+    @media #{$md-device} {
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+    &:before {
+      background-color: $white;
+      border-radius: 50%;
+      content: "";
+      height: 546px;
+      left: -201px;
+      position: absolute;
+      top: -331px;
+      width: 546px;
+      z-index: -1;
+      @media #{$lg-device} {
+        top: -300px;
+      }
+      @media #{$md-device} {
+        display: none;
+      }
+    }
+    .thumb {
+      img {
+        @media #{$md-device} {
+          padding-right: 23px;
+          width: 100%;
+        }
+        @media #{$sm-device} {
+          padding-right: 17px;
+        }
+        &.img-two {
+          margin-left: -23px;
+          @media #{$lg-device} {
+            margin-left: 0;
+            width: 93%;
+          }
+          @media #{$md-device} {
+            padding-right: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .about-content {
+    @media #{$md-device} {
+      margin-left: 29px;
+    }
+    .text-style {
+      color: #464444;
+      font-family: $font-current-theme2;
+      font-size: 22px;
+      line-height: 1.364;
+      margin-bottom: 26px;
+      margin-right: -10px;
+      position: relative;
+      @media #{$xl-device} {
+        margin-right: 0;
+      }
+      @media #{$xxs-device} {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      &:before {
+        background-color: $theme-color;
+        content: "";
+        height: 75px;
+        left: -29px;
+        position: absolute;
+        top: 7px;
+        width: 4px;
+      }
+    }
+    p {
+      margin-bottom: 24px;
+      @media #{$xxs-device} {
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .list-icon-style {
+      align-items: center;
+      display: flex;
+      color: $theme-color3;
+      font-size: 15px;
+      font-weight: $font-weight-bold;
+      justify-content: space-between;
+      line-height: 25px;
+      margin-bottom: 42px;
+      margin-top: 29px;
+      position: relative;
+      @media #{$md-device} {
+        max-width: 500px;
+      }
+      @media #{$xxs-device} {
+        display: block;
+        margin-bottom: 25px;
+      }
+      li {
+        align-items: flex-start;
+        display: flex;
+        @media #{$xxs-device} {
+          margin-bottom: 15px;
+        }
+        &.line-center {
+          background-color: $theme-color;
+          height: 43px;
+          position: relative;
+          top: -2px;
+          width: 4px;
+          @media #{$xxs-device} {
+            display: none;
+          }
+        }
+      }
+      .icon-img {
+        margin-right: 20px;
+        max-width: none;
+        position: relative;
+        top: 6px;
+      }
+    }
+  }
+}
+
+.about-page-wrapper {
+  .about-area {
+    padding: 146px 0 0;
+    position: relative;
+    @media #{$lg-device} {
+      padding: 95px 0 0;
+    }
+    @media #{$sm-device} {
+      padding: 80px 0 0;
+    }
+    @media #{$xs-device} {
+      padding: 70px 0 0;
+    }
+    &:before {
+      background-color: $white-f7;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: calc(50% - 315px);
+      z-index: -1;
+    }
+    .section-title {
+      margin-bottom: 12px;
+      @media #{$md-device} {
+        margin-bottom: 60px;
+      }
+      @media (max-width:399.98px) {
+        text-align: center;
+        .title {
+          font-size: 23px;
+        }
+      }      
+    }
+    .thumb {
+      &.thumb-style {
+        margin-top: 64px;
+        @media #{$md-device} {
+          margin-bottom: 50px;
+          margin-top: 0;
+        }
+      }
+    }
+    .about-content {
+      padding-left: 70px;
+      @media #{$md-device} {
+        padding-left: 0;
+      }
+      .text-style {
+        color: $theme-color3;
+        margin-right: 0;
+        @media #{$sm-device} {
+          font-size: 18px;
+        }
+      }
+    }
+    .content-box-wrp {
+      margin-top: 44px;
+      padding-left: 40px;
+      @media #{$md-device} {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.content-box-item {
+  background-color: #fc6539;
+  padding: 62px 35px 48px 43px;
+  position: relative;
+  z-index: 1;
+  @media #{$xxs-device} {
+    padding: 62px 25px 48px;
+  }
+  .title {
+    color: $white;
+    font-size: 38px;
+    margin-bottom: 59px;
+    padding-left: 28px;
+    position: relative;
+    &:before {
+      background-color: rgba($white, .15);
+      border-radius: 50%;
+      content: "";
+      height: 82.5px;
+      left: -1px;
+      position: absolute;
+      top: 50%;
+      width: 82.5px;
+      @include translate(0, -50%);
+    }
+  }
+  .img-line-shape {
+    margin-bottom: 34px;
+  }
+  p {
+    color: $white;
+    margin-bottom: 14px;
+  }
+  .bg-line-shape {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}

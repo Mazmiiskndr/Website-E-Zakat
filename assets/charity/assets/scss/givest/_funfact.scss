@@ -1,0 +1,112 @@
+/*
+-----------------------------------------------------------------------
+    Funfact CSS
+-----------------------------------------------------------------------
+*/
+.funfact-area {
+  &.funfact-default-area {
+    background-color: $white-f7;
+    .container {
+      max-width: 1310px;
+    }
+  }
+}
+
+.funfact-items-style1 {
+  .funfact-item {
+    border-left: 1px solid #eaecec;
+    padding: 140px 0 143px;
+    @include transition(.3s);
+    @media #{$lg-device} {
+      padding: 100px 0 95px;
+    }
+    @media #{$md-device} {
+      padding: 90px 0 93px;
+    }
+    @media #{$sm-device} {
+      border-bottom: 1px solid #eaecec;
+      padding: 60px 0 63px;
+    }
+    @media #{$xs-device} {
+      border-left: none;
+      border-bottom: 1px solid #eaecec;
+    }
+    .inner-content {
+      display: flex;
+      padding-left: 110px;
+      @media #{$xl-device} {
+        padding-left: 80px;
+      }
+      @media #{$lg-device} {
+        padding-left: 0;
+        justify-content: center;
+      }
+    }
+    .icon-box {
+      margin: 39px 44px 0 0;
+      position: relative;
+      @media #{$md-device} {
+        margin: 34px 35px 0 0;
+      }
+      @media #{$sm-device} {
+        margin: 24px 55px 0 0;
+      }
+      .icon {
+        max-width: none;
+        min-width: 66px;
+        @media #{$md-device} {
+          min-width: auto;
+          width: 50px;
+        }
+        @media #{$sm-device} {
+          width: 45px;
+        }
+      }
+      .shape-img {
+        left: -38px;
+        max-width: none;
+        position: absolute;
+        top: -48px;
+        @media #{$md-device} {
+          left: 0;
+          top: -30px;
+          width: 90px;
+        }
+        @media #{$sm-device} {
+          top: -36px;
+          width: 80px;
+        }
+      }
+    }
+    .number {
+      h2 {
+        font-size: 55px;
+        margin-bottom: 12px;
+        @media #{$xl-device} {
+          font-size: 46px;
+        }
+        @media #{$lg-device} {
+          font-size: 40px;
+        }
+        @media #{$sm-device} {
+          font-size: 30px;
+        }
+      }
+    }
+    .line-shape {
+      margin-bottom: 16px;
+      margin-left: 2px;
+    }
+    .title {
+      color: #969696;
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+      letter-spacing: 1.2px;
+      margin-left: 2px;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      border-right: 1px solid #eaecec;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+/*
+-----------------------------------------------------------------------
+  Icon Box CSS
+-----------------------------------------------------------------------
+*/
+.icon-box-style1 {
+  .icon-box-item {
+    background-color: $theme-color;
+    padding: 52px 47px 44px 58px;
+    @media #{$lg-device} {
+      padding: 45px 25px;
+    }
+    .icon-box-top {
+      display: flex;
+      margin-bottom: 33px;
+      padding-left: 22px;
+      @media #{$lg-device} {
+        margin-bottom: 5px;
+        padding-right: 20px;
+      }
+      @media #{$xss-device} {
+        padding-right: 0;
+      }
+    }
+    .icon-box {
+      margin-right: 11px;
+      min-height: 89px;
+      min-width: 87px;
+      position: relative;
+      top: 7px;
+      @media #{$lg-device} {
+        margin-right: 10px;
+        min-height: 78px;
+        min-width: 50px;
+      }
+      &:after {
+        background-color: rgba($white, .15);
+        border-radius: 50%;
+        content: "";
+        height: 83px;
+        left: -27px;
+        position: absolute;
+        top: -15px;
+        width: 83px;
+        @media #{$lg-device} {
+          height: 58px;
+          left: -22px;
+          width: 58px;
+        }
+      }
+      .icon-img {
+        min-width: 76px;
+        @media #{$lg-device} {
+          min-width: auto;
+          width: 40px;
+        }
+      }
+    }
+    .title {
+      color: $white;
+      font-size: 38px;
+      line-height: 1.185;
+      margin-bottom: 0;
+      @media #{$lg-device} {
+        font-size: 24px;
+      }
+      @media #{$md-device} {
+        padding-top: 6px;
+      }
+    }
+    .content {
+      .separator-line {
+        margin-bottom: 27px;
+        img {
+          max-width: none;
+        }
+      }
+      p {
+        color: #feece7;
+        line-height: 1.667;
+        margin-bottom: 32px;
+      }
+      .btn-theme {
+        &.btn-white {
+          background-color: transparent;
+          border-color: $white;
+          &:hover {
+            @include gradient-bg();
+            .icon {
+            }
+          }
+        }
+      }
+    }
+    &.item-two {
+      background-color: $theme-color3;
+      .icon-box-top {
+        left: -7px;
+        position: relative;
+      }
+      .icon-box {
+        margin-right: 18px;
+        @media #{$lg-device} {
+          margin-right: 10px;
+        }
+        .icon-img {
+          min-width: 87px;
+          @media #{$lg-device} {
+            min-width: auto;
+            width: 45px;
+          }
+        }
+      }
+    }
+    &.item-three {
+      background-color: $theme-color2;
+      .icon-box-top {
+        left: -6px;
+        position: relative;
+      }
+      .icon-box {
+        margin-right: 17px;
+        @media #{$lg-device} {
+          margin-right: 10px;
+        }
+        .icon-img {
+          min-width: 83px;
+          @media #{$lg-device} {
+            min-width: auto;
+            width: 45px;
+          }
+        }
+      }
+    }
+  } 
+}

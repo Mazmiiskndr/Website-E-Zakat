@@ -1,0 +1,217 @@
+/*
+-----------------------------------------------------------------------
+	Contact CSS
+-----------------------------------------------------------------------
+*/
+.contact-area {
+	padding: 117px 0 220px;
+	position: relative;
+	@media #{$lg-device} {
+		padding: 80px 0 150px;
+	}
+}
+
+.contact-page-wrapper {
+	.contact-area {
+		padding: 150px 0 390px;
+		@media #{$lg-device} {
+			padding: 100px 0 240px;
+		}
+		@media #{$xxs-device} {
+			padding: 70px 0 220px;
+		}
+	}
+}
+
+.contact-colunm {
+	display: flex;
+	padding-left: 183px;
+	@media #{$xl-device} {
+		padding-left: 80px;
+	}
+	@media #{$lg-device} {
+		display: block;
+		padding: 0 100px;
+	}	
+	@media #{$sm-device} {
+		padding: 0 15px;
+	}
+	@media #{$xxs-device} {
+		padding: 0;
+	}
+	.contact-map-area {
+		height: auto;
+		position: relative;
+		width: 100%;
+		@media #{$lg-device} {
+			height: 900px;
+		}
+		@media #{$xs-device} {
+			height: auto;
+		}
+		.contact-info-content {
+			left: 0;
+			min-width: 500px;
+			padding: 53px 70px 49px 70px;
+			position: absolute;
+			top: 50%;
+			@include translate(0, -50%);
+			@include gradient-bg-style();
+			@media #{$xs-device} {
+				margin-bottom: 70px;
+				min-width: auto;
+				padding: 53px 20px 49px;
+				position: relative;
+				top: auto;
+				transform: none;
+				width: 100%;
+			}
+			@media #{$xs-device} {
+				padding: 53px 15px 49px 0;
+			}
+			.contact-info-item {
+				border-bottom: 1px solid rgba($white, .2);
+				margin-bottom: 28px;
+				padding-bottom: 25px;
+				position: relative;
+				.icon {
+					left: 30px;
+					position: absolute;
+					top: 29px;
+					&:before {
+						background-color: rgba($white, .2);
+						border-radius: 50%;
+						content: "";
+						height: 75px;
+						left: -30px;
+						position: absolute;
+						top: -27px;
+						width: 75px;
+						z-index: -1;
+					}
+					.icon-img {
+						width: auto;
+					}
+					&.icon-mail {
+						top: 33px;
+						&:before {
+							top: -31px;
+						}
+						.icon-img {
+							left: -3px;
+							position: relative;
+						}
+					}
+					&.icon-location {
+						.icon-img {
+							left: 6px;
+							position: relative;
+						}
+					}
+				}
+				.content {
+					padding-left: 128px;
+					@media #{$xxs-device} {
+						padding-left: 108px;
+					}
+					h4 {
+						color: $white;
+						font-size: 35px;
+						margin-bottom: 12px;
+						@media #{$xxs-device} {
+							font-size: 22px;
+						}
+					}
+					.line-icon {
+						margin-bottom: 12px;
+					}
+					p, a {
+						font-size: 18px;
+						font-weight: $font-weight-medium;
+						line-height: 1.723;
+						@media #{$xxs-device} {
+							font-size: 16px;
+						}
+					}
+					p {
+						color: $white;
+						margin-bottom: 0;
+					}
+					a {
+						color: $white;
+						display: block;
+						margin-bottom: 1px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				&:last-child {
+					border: none;
+				}
+			}
+		}
+	}
+	.contact-form {
+		background-color: $white-f7;
+		max-width: 662px;
+		min-width: 662px;
+		padding: 145px 100px 151px 132px;
+		width: 100%;
+		@media #{$xl-device} {
+			max-width: 550px;
+			min-width: 550px;
+			padding: 145px 65px 151px 85px;
+		}
+		@media #{$lg-device} {
+			max-width: none;
+			margin-bottom: 90px;
+			min-width: auto;
+			padding: 95px 65px 100px 85px;
+			width: 100%;
+		}
+		@media #{$md-device} {
+			padding: 95px 25px 100px;
+		}
+		@media #{$sm-device} {
+			padding: 65px 30px 70px;
+		}
+		@media #{$xxs-device} {
+			margin-bottom: 60px;
+			padding: 60px 15px 65px;
+		}
+		.section-title {
+			margin-bottom: 54px;
+			@media #{$xxs-device} {
+				margin-bottom: 40px;
+			}
+			.title {
+				font-size: 60px;
+				margin-bottom: 16px;
+				@media #{$lg-device} {
+					font-size: 50px;
+				}
+				@media #{$sm-device} {
+					font-size: 30px;
+				}
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.contact-map-area {
+	height: 700px;
+	@media #{$sm-device} {
+		height: 400px;
+	}
+	iframe {
+	  height: 100%;
+	  width: 100%;
+	  @media #{$xs-device} {
+	  	height: 300px;
+	  }
+	}
+}

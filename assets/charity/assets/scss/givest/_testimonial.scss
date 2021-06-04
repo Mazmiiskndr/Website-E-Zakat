@@ -1,0 +1,241 @@
+/*
+-----------------------------------------------------------------------
+	Testimonial CSS
+-----------------------------------------------------------------------
+*/
+.testimonial-area {
+	&.testimonial-default-area {
+		padding: 150px 0 148px;
+		@media #{$lg-device} {
+			padding: 100px 0 98px;
+		}
+		@media #{$sm-device} {
+			padding: 80px 0 78px;
+		}
+		.title-wrp {
+		  align-items: center;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		  display: flex;
+		  justify-content: flex-end;
+			left: 0;
+			min-height: 530px;
+			padding-left: 70px;
+			padding-right: 7%;
+			position: absolute;
+			width: calc(50% - 185px);
+			@media (max-width:1599px) {
+				padding-right: 4%;
+				width: calc(50% - 155px);
+			}
+			@media #{$xl-device} {
+				padding-left: 55px;
+			}
+			@media #{$lg-device} {
+				left: calc(0% - 30px);
+				padding-right: 30px;
+			}
+			@media #{$md-device} {
+				justify-content: flex-start;
+				left: auto;
+				margin-bottom: 70px;
+				min-height: auto;
+				padding: 40px 0 5px 35px;
+				position: relative;
+				width: 100%;
+			}
+			@media #{$sm-device} {
+				margin-bottom: 50px;
+			}
+			@media #{$xs-device} {
+				padding-right: 30px;
+			}
+			@media #{$xxs-device} {
+				text-align: center;
+			}
+			&:after {
+				content: "";
+				height: 100%;
+				left: 0;
+				opacity: .902;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				@include gradient-bg-style();
+			}
+			.section-title {
+				margin-bottom: 33px;
+				max-width: 505px;
+				position: relative;
+				z-index: 1;
+				.title {
+					margin-bottom: 0;
+					text-shadow: 3px 3px 0 rgba(0, 29, 35, 45%);
+					&.title-style {
+						@media #{$md-device} {
+							margin-top: 10px;
+						}
+						.img-shape {
+							@include translate(-21.5%, -50%);
+							@media #{$xl-device} {
+								@include translate(-50%, -50%);
+							}
+						}
+					}
+				}
+			}
+		}
+		.testimonial-content {
+			padding-right: 70px;
+			@media #{$lg-device} {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+.testimonial-single {
+	@media #{$xxs-device} {
+		text-align: center;
+	}
+	.client-thumb-wrp {
+		margin-bottom: 39px;
+		position: relative;
+		z-index: 1;
+		.quote-icon {
+			font-size: 280px;
+			font-family: $font-current-theme2;
+			left: 98px;
+			line-height: 212px;
+			position: absolute;
+			top: 24px;
+			z-index: -1;
+			@include gradient-text();
+			@media #{$xxs-device} {
+				left: auto;
+				right: 80px;
+			}
+		}
+	}
+	.client-thumb {
+		background-color: #13373e;
+		border-radius: 50%;
+		height: 129px;
+		padding: 4px;
+		width: 129px;
+		@media #{$xxs-device} {
+			margin: 0 auto;
+		}
+		img {
+			border-radius: 50%;
+		}
+	}
+	.client-content {
+		margin-bottom: 38px;
+		position: relative;
+		p {
+			color: #c2c2c2;
+			font-size: 25px;
+			font-family: $font-current-theme2;
+			line-height: 1.6;
+			@media #{$xxs-device} {
+				font-size: 20px;
+			}
+		}
+		.quote-icon {
+			position: absolute;
+	    right: 111px;
+	    top: 18px;
+		}
+	}
+	.client-info {
+		.shape-line-img {
+			margin-bottom: 31px;
+			width: auto;
+		}
+		.name {
+			color: $white;
+			font-size: 27px;
+			margin-bottom: 29px;
+			@media #{$sm-device} {
+				font-size: 18px;
+			}
+			@media #{$xxs-device} {
+				margin-bottom: 15px;
+			}
+		}
+		.designation {
+			color: $theme-color;
+			font-family: $font-current-theme2;
+			font-size: 14px;
+			font-weight: $font-weight-bold;
+			letter-spacing: 1px;
+			margin: 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.testimonial-slider-container {
+	overflow: visible;
+	.navigation-wrp {
+		background-color: #192a2d;
+		height: 135px;
+		left: calc(121% + 1px);
+		padding-left: 52px;
+		position: absolute;
+		top: calc(50% - 69px);
+		width: 4000px;
+		@media (max-width:1599px) {
+			left: calc(109% + 1px);
+		}
+		@media #{$xl-device} {
+			bottom: 2px;
+			left: calc(65% + 1px);
+			top: auto;
+		}
+		@media #{$md-device} {
+			bottom: 0;
+		}
+		@media #{$sm-device} {
+			height: 100px;
+		}
+		@media #{$xs-device} {
+			left: calc(48% + 1px);
+		}
+		@media #{$xxs-device} {
+			display: none;
+		}
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		border: 2px solid #283e42;
+		border-radius: 50%;
+		color: #fff;
+		display: inline-block;
+		font-size: 32px;
+		height: 60px;
+		left: auto;
+		line-height: 52px;
+		position: relative;
+		right: auto;
+		text-align: center;
+		top: calc(50% - 8px);
+		width: 60px;
+		@include transition(.3s);
+		&:after {
+			display: none;
+		}
+		&:hover {
+			background-color: #283e42;
+		}
+		.icon-img {
+			max-width: none;
+			width: auto;
+		}
+	}
+	.swiper-button-next {
+		margin-left: 17px;
+	}
+}

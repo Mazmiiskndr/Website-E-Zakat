@@ -1,0 +1,45 @@
+// Table of contents
+@import "tableofcontent";
+
+// Base
+@import "common/variables";
+@import "common/mixins";
+@import "common/rfs";
+
+// Typography
+ @import "common/typography";
+
+// Common Styles
+@import "givest/common";
+@import "givest/navbar";
+
+// Header
+@import "header/header";
+
+// Banner Styles
+@import "givest/banner";
+
+// Components
+@import "givest/about";
+@import "givest/service";
+@import "givest/team";
+@import "givest/causes";
+@import "givest/events";
+@import "givest/gallery";
+@import "givest/testimonial";
+@import "givest/brand-logo";
+@import "givest/funfact";
+@import "givest/donate";
+@import "givest/icon-box";
+@import "givest/form";
+
+
+
+// Blog
+@import "givest/blog";
+
+// Contact
+@import "givest/contact";
+
+// Footer
+@import "footer/footer";

@@ -1,0 +1,403 @@
+/*
+-----------------------------------------------------------------------
+    Causes CSS
+-----------------------------------------------------------------------
+*/
+.causes-area {
+  &.causes-default-area {    
+    padding: 148px 0 152px;
+    @media #{$lg-device} {
+      padding: 95px 0 100px;
+    }
+    @media #{$md-device} {
+      padding: 70px 0 100px;
+    }
+    @media #{$sm-device} {
+      padding: 60px 0 80px;
+    }
+    .section-title {
+      margin-bottom: 123px;
+      @media #{$lg-device} {
+        margin-bottom: 80px;
+      }
+      @media #{$xs-device} {
+        margin-bottom: 60px;
+      }
+      .subtitle {
+        @media #{$xs-device} {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.causes-item {
+  .thumb {
+    overflow: hidden;
+    img {
+      width: 100%;
+      @include transition(.8s);
+    }
+  }
+  .content {
+    background-color: $white-f7;
+    padding: 31px 25px 10px;
+    @media #{$lg-device} {
+      padding: 32px 20px 10px;
+    }
+    .donate-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 26px;
+      @media #{$lg-device} {
+        margin-bottom: 20px;
+      }
+      .info-item {
+        background-color: $white;
+        font-family: $font-current-theme2;
+        min-width: 100px;
+        padding: 7px 13px 6px;
+        @include transition(.3s);
+        @media #{$lg-device} {
+          min-width: auto;
+          padding: 9px 13px 8px;
+        }
+        @media #{$md-device} {
+          min-width: 90px;
+        }
+        @media #{$sm-device} {
+          min-width: 145px;
+          text-align: center;
+        }
+        @media #{$xs-device} {
+          min-width: 135px;
+        }
+        @media #{$xxs-device} {
+          min-width: 95px;
+        }
+        @media #{$xss-device} {
+          min-width: 82px;
+        }        
+        .info-title, .amount {
+          display: block;
+          line-height: 1;
+          @include transition(.1s);
+        }
+        .info-title {
+          color: $theme-color3;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        .amount {
+          color: $theme-color;
+          font-size: 20px;
+          @include gradient-text-two();
+          @media #{$lg-device} {
+            font-size: 15px;
+          }
+        }
+        &:hover {
+          @include gradient-bg-two();
+          .info-title, .amount {
+            color: $white;
+            -webkit-text-fill-color: $white;
+          }
+        }
+      }
+    }
+    .title {
+      font-size: 22px;
+      line-height: 1.455;
+      margin-bottom: 8px;
+      @media #{$lg-device} {
+        font-size: 18px;
+      }
+      @media #{$sm-device} {
+        font-size: 24px;
+      }
+      @media #{$xs-device} {
+        font-size: 22px;
+      }
+      @media #{$xxs-device} {
+        font-size: 18px;
+      }
+      a {
+        color: $theme-color3;
+        display: block;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+  .admin {
+    @media #{$lg-device} {
+      margin-bottom: 20px;
+    }
+    h5 {
+      font-family: $font-current-theme1;
+      font-size: 15px;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0;
+    }
+    a {
+      color: $theme-color3;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    .icon-img {
+      box-shadow: 0px 3px 7px 0px rgba(252, 102, 57, 0.08);
+      height: 40px;
+      line-height: 35px;
+      text-align: center;
+      display: block;
+      border-radius: 50%;
+      background-color: #fff;
+      min-width: 40px;
+      margin-right: 11px;
+      width: 40px;
+    }
+  }
+  .causes-footer {
+    align-items: center;
+    background-color: $white-f7;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px 33px;
+    @media #{$lg-device} {
+      display: block;
+    }
+  }
+  &:hover {
+    .thumb {
+      img {
+        @include scale(1.15);
+      }
+    }
+  }
+}
+
+.causes-page-wrapper {
+  .causes-area {
+    &.causes-default-area {    
+      padding: 148px 0 152px;
+      @media #{$lg-device} {
+        padding: 95px 0 70px;
+      }
+      @media #{$md-device} {
+        padding: 90px 0 60px;
+      }
+      @media #{$sm-device} {
+        padding: 80px 0 50px;
+      }
+      @media #{$xs-device} {
+        padding: 70px 0 40px;
+      }
+    }
+  }
+}
+
+.causes-details-area {
+  padding: 150px 0 391px;
+  @media #{$lg-device} {
+    padding: 100px 0 230px;
+  }
+  @media #{$sm-device} {
+    padding: 70px 0 170px;
+  }
+  .causes-details-column {
+    display: flex;
+    justify-content: space-between;
+    @media #{$lg-device} {
+      display: block;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .causes-details-content {
+      max-width: 700px;
+      width: 100%;
+      @media #{$lg-device} {
+        margin-bottom: 70px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .sidebar-area {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}
+
+.causes-details {
+  h3 {
+    font-size: 30px;
+    line-height: 1.334;
+    margin-bottom: 16px;
+    @media #{$sm-device} {
+      font-size: 22px;
+      br {
+        display: none;
+      }
+    }
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  .cause-title {
+    margin-bottom: 30px;
+    margin-top: 32px;
+    @media #{$sm-device} {
+
+    }
+  }
+  .donate-info-wrp {
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    margin-bottom: 34px;
+    padding: 10px 0;
+    @media #{$sm-device} {
+      border-bottom: none;
+    }
+  }
+  .donate-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-right: 3px;
+    @media #{$sm-device} {
+      border-bottom: 1px solid #ededed;
+      margin-bottom: 30px;
+      padding-bottom: 12px;
+    }
+    .info-item {
+      background-color: $white-f7;
+      font-family: $font-current-theme2;
+      min-width: 100px;
+      padding: 7px 13px 6px;
+      @include transition(.3s);
+      .info-title, .amount {
+        display: block;
+        line-height: 1;
+        @include transition(.1s);
+      }
+      .info-title {
+        color: $theme-color3;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      .amount {
+        color: $theme-color;
+        font-size: 20px;
+        @include gradient-text-two();
+        @media #{$xss-device} {
+          font-size: 18px;
+        }
+      }
+      &:hover {
+        @include gradient-bg-two();
+        .info-title, .amount {
+          color: $white;
+          -webkit-text-fill-color: $white;
+        }
+      }
+    }
+  }
+  .progress-item {
+    margin-bottom: 0;
+    margin-top: 38px;
+    padding-left: 5px;
+    .progress-line {
+      background-color: $white-f7;
+      border-radius: 0;
+      height: 7px;
+      .progress-bar-line {
+        background-color: $theme-color2;
+        border-radius: 0;
+        overflow: visible !important;
+        position: relative;
+        &:after {
+          background-color: $theme-color2;
+          border-radius: 50%;
+          content: "";
+          height: 15px;
+          position: absolute;
+          right: -3px;
+          top: 50%;
+          width: 15px;
+          @include translate(0px, -50%);
+        }
+        span {
+          color: $theme-color;
+          font-family: $font-current-theme2;
+          font-size: 20px;
+          position: absolute;
+          right: -15px;
+          top: -42px;
+        }
+      }
+    }
+  }
+  .document-item {
+    align-items: center;
+    background-color: $theme-color;
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    margin-top: 10px;
+    padding: 15px 30px;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+    h4 {
+      color: $white;
+      font-family: $font-current-theme2;
+      font-size: 20px;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+}
+
+.causes-details-content {
+  .donners-info {
+    margin-bottom: 30px;
+    padding: 21px 0 0;
+    h3 {
+      color: $theme-color3;
+      margin-bottom: 33px;
+    }
+    .donners-item {
+      display: block;
+      .donner-item {
+        background-color: transparent;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 0;
+        &.donner-number {
+          line-height: 82px;
+          position: relative;
+          top: 3px;
+          @media #{$sm-device} {
+            top: 4px;
+          }
+          @media #{$xs-device} {
+            top: 3px;
+          }
+          @media #{$xxs-device} {
+            line-height: 60px;
+            top: 1px;
+          }
+        }
+      }
+    }
+  }
+}

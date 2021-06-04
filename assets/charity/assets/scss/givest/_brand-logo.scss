@@ -1,0 +1,87 @@
+/*
+-----------------------------------------------------------------------
+  Brand Logo CSS
+-----------------------------------------------------------------------
+*/
+
+.brand-logo-area {
+  &.brand-logo-default-area {
+    padding: 109px 0 339px;
+    @media #{$lg-device} {
+      padding: 100px 0 185px;
+    }
+    @media #{$sm-device} {
+      padding: 75px 15px 167px;
+    }
+    .section-title {
+      margin-bottom: 80px;
+      @media #{$sm-device} {
+        margin-bottom: 60px;
+      }
+      @media #{$xs-device} {
+        margin: 0 auto 60px;
+        max-width: 260px;
+      }
+      .title {
+        &.title-style {
+          .img-shape {
+            @include translate(-60%, -47%);
+            @media #{$md-device} {
+              @include translate(-50%, -50%);
+            }
+          }
+        }
+      }
+      .btn-theme {
+        &.btn-border {
+          padding: 19.5px 60px 19.5px 36px;
+          @media #{$sm-device} {
+            padding: 13px 50px 13px 20px;
+          }
+          .icon {
+            right: 30px;
+            @media #{$sm-device} {
+              right: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .brand-logo-content {
+      margin: 16px -27px 0;
+      .brand-logo-item {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 49px;
+        min-height: 79px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.brand-logo-item {
+  img {
+    opacity: 1;
+    @include transition(.3s);
+  }
+  &:hover {
+    img {
+      opacity: .7;
+    }
+  }
+}
+
+.brand-logo-slider-container {
+  padding-left: 20px;
+  .brand-logo-slider {
+    .brand-logo-item {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      min-height: 96px;
+    }
+  }
+}

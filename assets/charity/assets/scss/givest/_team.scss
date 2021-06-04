@@ -1,0 +1,186 @@
+/*
+-----------------------------------------------------------------------
+	Team CSS
+-----------------------------------------------------------------------
+*/
+.team-area {
+	&.team-default-area {
+		padding: 325px 0 120px;
+		.section-title {
+			margin-bottom: 94px;
+		}
+	}
+	&.team-fluid-area {
+		padding: 150px 0 118px;
+		@media #{$lg-device} {
+			padding: 95px 0 70px;
+		}
+		@media #{$sm-device} {
+			padding: 85px 0 60px;
+		}
+		.container {
+			max-width: 1676px;
+	    padding-left: 15px;
+	    padding-right: 15px;
+		}
+		.section-title {
+			margin-bottom: 0;
+			margin-top: 38px;
+			padding-right: 30px;
+			@media (max-width:1599px) {
+				padding-right: 0;
+			}
+			@media #{$xl-device} {
+				margin-top: 0;
+			}
+			@media #{$lg-device} {
+				margin-bottom: 70px;
+				text-align: center;
+			}
+			.desc {
+				margin-top: 70px;
+				@media #{$lg-device} {
+					display: none;
+				}
+			}
+			.title {
+				@media (min-width:1400px) and (max-width:1599px) {
+					font-size: 50px;
+				}
+				@media (min-width:1200px) and (max-width:1399px) {
+					font-size: 46px;
+				}
+			}
+		}
+		.team-member-items {
+			padding-left: 37.3px;
+			@media #{$lg-device} {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.team-member {
+	margin-bottom: 30px;
+	.thumb {
+		margin-bottom: 30px;
+		overflow: hidden;
+		position: relative;
+		&:after {
+			bottom: -100%;
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			@include gradient-bottom-bg-hover();
+			@include transition(.2s);
+		}
+		img {
+			width: 100%;
+			@include transition(.6s);
+		}
+		.social-icons {
+			bottom: -45px;
+			left: 50%;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			z-index: 1;
+			@include translate(-50%, 0);
+			@include transition(.3s);
+			a {
+				background-color: $white;
+				border-radius: 50%;
+				color: $theme-color3;
+				display: inline-block;
+				font-size: 17px;
+				height: 45px;
+				line-height: 47px;
+				margin-right: 6px;
+				text-align: center;
+				width: 45px;
+				@include transition(.1s);
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover {
+					color: $white;
+					@include gradient-bg();
+				}
+			}
+		}
+	}
+	.content {
+		.member-info {
+			text-align: center;
+			.separator-line {
+				line-height: 1;
+				margin-bottom: 23px;
+				img {
+					@include transition(.3s);
+				}
+			}
+			.name {
+				font-size: 27px;
+				margin-bottom: 23px;
+				@include transition(.3s);
+				@media #{$xl-device} {
+					font-size: 22px;
+					margin-bottom: 15px;
+				}
+				a {
+					color: $theme-color3;
+					&:hover {
+						@include gradient-text();
+					}
+				}
+			}
+			.designation {
+				color: #909090;
+				font-family: $font-current-theme1;
+				font-size: 13px;
+				font-weight: $font-weight-bold;
+				letter-spacing: 1px;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				@include transition(.3s);
+			}
+		}
+	}
+	&:hover {
+		.thumb {
+			&:after {
+				bottom: 0;
+			}
+			img {
+				@include scale(1.05);
+			}
+		}
+		.social-icons {
+			bottom: 30px;
+		}
+	}
+}
+
+.volunteer-page-wrapper {
+	.team-area {
+		padding: 145px 0 91px;
+		@media #{$lg-device} {
+			padding: 100px 0 40px;
+		}
+		@media #{$sm-device} {
+			padding: 85px 0 25px;
+		}
+		.section-title {
+			margin-bottom: 129px;
+			@media #{$lg-device} {
+				margin-bottom: 70px;
+			}
+		}
+	}
+	.team-member {
+		margin-bottom: 57px;
+	}
+}

@@ -1,0 +1,512 @@
+/*
+-----------------------------------------------------------------------
+	Events CSS
+-----------------------------------------------------------------------
+*/
+.events-area {
+  &.events-default-area {
+    padding: 145px 0 120px;
+    @media #{$lg-device} {
+      padding: 98px 0 70px;
+    }
+    @media #{$md-device} {
+      padding: 98px 0 187px;
+    }
+    @media #{$sm-device} {
+      padding: 78px 0 157px;
+    }
+    @media #{$xxs-device} {
+      padding: 78px 0 50px;
+    }
+    .section-title {
+      margin-bottom: 99px;
+      @media #{$lg-device} {
+        margin-bottom: 75px;
+      }
+      @media #{$xs-device} {
+        margin-bottom: 65px;
+      }      
+      @media #{$xxs-device} {
+        text-align: center;
+      }
+      .title {
+        &.title-style {
+          .img-shape {
+            @include translate(-82.5%, -50%);
+            @media #{$lg-device} {
+              @include translate(-130%, -50%);
+            }
+            @media #{$xxs-device} {
+              @include translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+    .events-content {
+      padding-right: 170px;
+      @media #{$lg-device} {
+        padding-right: 70px;
+      }
+      @media #{$md-device} {
+        padding-right: 0;
+      }
+    }
+    .layer-style {
+      margin-top: 150px;
+      position: relative;
+      @media (max-width:1699px) {
+        left: -100px;
+        margin-top: 165px;
+      }
+      @media (max-width:1499px) {
+        left: -40px;
+        margin-top: 290px;
+      }
+      @media #{$md-device} {
+        margin-top: 110px;
+      }
+      @media #{$xxs-device} {
+        display: none;
+      }
+      .thumb {
+        position: relative;
+        img {
+          max-width: none;
+          @media (max-width:1499px) {
+            max-width: 100%;
+          }
+        }
+        .play-video-btn {
+          left: 65%;
+          position: absolute;
+          top: 40.5%;
+          @media (max-width:1499px) {
+            left: 38%;
+            top: 36%;
+          }
+        }
+      }
+      .shape-style1,
+      .shape-style2,
+      .shape-style3,
+      .shape-style4 {
+        position: absolute;
+        z-index: -1;
+        img {
+          max-width: none;
+          @media (max-width:1499px) {
+            max-width: 100%;
+          }
+        }
+      }
+      .shape-style1 {
+        left: 40px;
+        top: -122px;
+        @media (max-width:1499px) {
+          top: -70px;
+        }
+      }
+      .shape-style2 {
+        left: -59px;
+        top: 0;
+        @media (max-width:1499px) {
+          left: -15px;
+          top: 55px;
+          width: 90%;
+        }
+      }
+      .shape-style3 {
+        left: 21px;
+        top: -136px;
+        @media (max-width:1499px) {
+          top: -80px;
+        }
+      }
+      .shape-style4 {
+        left: -34px;
+        top: 4px;
+        @media (max-width:1499px) {
+          left: -15px;
+          top: 55px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.event-item {
+  margin-bottom: 30px;
+  .thumb {
+    min-width: 240px;
+    overflow: hidden;
+    position: relative;
+    .thumb-img {
+      width: 100%;
+      @include transition(.6s);
+    }
+    .btn-theme {
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      visibility: hidden;
+      @include translate(-50%, -50%);
+      @include transition(.3s);
+      img {
+        min-width: auto;
+      }
+    }
+  }
+  .content {
+    background-color: $white-f7;
+    padding: 30px;
+    .event-info {
+      color: $theme-color3;
+      font-weight: $font-weight-bold;
+      margin-bottom: 8px;
+      span {
+        color: $theme-color;
+      }
+    }
+    .event-name {
+      font-size: 24px;
+      line-height: 1.334;
+      @media #{$lg-device} {
+        font-size: 20px;
+      }
+      @media #{$sm-device} {
+        font-size: 18px;
+      }
+      a {
+        color: $theme-color3;
+        display: block;
+        @include transition(all .3s);
+        &:hover {
+          @include gradient-text();
+        }
+      }
+    }
+  }
+  &:hover {
+    .thumb {
+      .thumb-img {
+        @include scale(1.15);
+      }
+      .btn-theme {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.events-list {
+  .event-item {
+    display: flex;
+    @media #{$xxs-device} {
+      display: block;
+    }
+    .thumb {
+      img {
+        min-width: 240px;
+        @media #{$xs-device} {
+          height: 100%;
+        }
+      }
+      .btn-theme {
+        img {
+          min-width: auto;
+          @media #{$xs-device} {
+            height: auto;
+          }
+        }
+      }
+    }
+    .content {
+      padding: 21px 30px 16px 44px;
+      @media #{$lg-device} {
+        padding: 25px 30px 15px 30px;
+      }
+      @media #{$xxs-device} {
+        padding: 25px 30px 25px;
+      }
+    }
+  }
+}
+
+.event-details-area {
+  padding: 150px 0 390px;
+  @media #{$lg-device} {
+    padding: 100px 0 230px;
+  }
+  @media #{$sm-device} {
+    padding: 70px 0 210px;
+  }
+  .event-details-column {
+    display: flex;
+    justify-content: space-between;
+    @media #{$lg-device} {
+      display: block;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .event-details-content {
+      max-width: 700px;
+      width: 100%;
+      @media #{$lg-device} {
+        margin-bottom: 70px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .sidebar-area {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+  .brand-logo-content {
+    @media #{$xxs-device} {
+      margin: 15px 0 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.event-details {
+  h3 {
+    font-size: 30px;
+    line-height: 1.334;
+    margin-bottom: 16px;
+    @media #{$xxs-device} {
+      font-size: 20px;
+    }
+    @media #{$xss-device} {
+      font-size: 18px;
+    }
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  .event-title {
+    margin-bottom: 18px;
+    margin-top: 32px;
+  }
+  .event-time-info {
+    display: flex;
+    justify-content: space-between;
+    @media #{$xxs-device} {
+      display: block;
+    }
+    .info-item {
+      background-color: $white-f7;
+      border-radius: 75px;
+      display: inline-block;
+      height: 200px;
+      min-width: 200px;
+      padding: 40px 15px 35px;
+      text-align: center;
+      width: 200px;
+      @include transition(.2s);
+      @media #{$sm-device} {
+        border-radius: 15px;
+        height: 130px;
+        min-width: 148px;
+        padding: 15px 15px 35px;
+        width: 148px;
+      }
+      @media #{$xxs-device} {
+        height: auto;
+        margin-bottom: 10px;
+        min-width: auto;
+        padding: 25px 15px;
+        width: 100%;
+      }
+      .icon {
+        margin-bottom: 36px;
+        @media #{$sm-device} {
+          margin-bottom: 18px;
+        }
+        img {
+          max-width: none;
+          @media #{$sm-device} {
+            width: 32px;
+          }
+        }
+      }
+      h4 {
+        font-size: 22px;
+        margin-bottom: 0;
+        @include gradient-text();
+        @include transition(.1s);
+        @media #{$sm-device} {
+          font-size: 16px;
+        }
+      }
+      &.event-location {
+        .icon {
+          margin-bottom: 21px;
+        }
+      }
+      &:hover {
+        @include gradient-bg();
+        .icon {
+          img {
+            filter: invert(0) brightness(100);
+          }
+        }
+        h4 {
+          background: none;
+          -webkit-text-fill-color: white;
+        }
+      }
+    }
+  }
+  .event-category {
+    background-color: $theme-color;
+    color: $white;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    min-width: 105px;
+    text-align: center;
+    padding: 7.5px 3px;
+    text-transform: uppercase;
+  }
+  .event-author {
+    color: $body-color;
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    span {
+      color: $theme-color;
+      font-size: 13px;
+      font-weight: $font-weight-normal;
+    }
+  }
+  .event-category-post {
+    align-items: center;
+    display: flex;
+    margin-top: 40px;
+    @media #{$xxs-device} {
+      display: block;
+    }
+    .event-category {
+      margin-right: 30px;
+      @media #{$xxs-device} {
+        margin-bottom: 13px;
+      }
+    }
+  }
+  .map-content {
+    height: 400px;
+    margin-bottom: 32px;
+    width: 100%;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .btn-wrp {
+    display: flex;
+    @media #{$sm-device} {
+      display: block;
+    }
+    .btn-theme {
+      @media #{$sm-device} {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      @media #{$xs-device} {
+        margin-bottom: 10px;
+      }
+      &.btn-border {
+        border-color: #e6e6e6;
+        color: $theme-color3;
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        margin-left: 30px;
+        padding: 18.38px 46.32px;
+        @media #{$sm-device} {
+          margin-left: 0;
+          padding: 18px 25px;
+        }
+        .icon {
+          &.icon-style {
+            margin-right: 20px;
+            position: relative;
+            transform: none;
+            right: auto;
+            top: auto;
+            @media #{$sm-device} {
+              margin-right: 12px;
+            }
+          }
+        }
+        &:hover {
+          background-color: transparent;
+          border-color: $theme-color3;
+        }
+      }
+    }
+  }
+}
+
+.btn-play {
+  display: inline-block;
+  .icon {
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    text-align: center;
+    width: 100px;
+    z-index: 1;
+    @include gradient-bg();
+  }
+
+  &.wave-btn {
+    position: relative;
+    span {
+      background: #f6dec9;
+      border-radius: 50%;
+      height: 200px;
+      left: -50px;
+      position: absolute;
+      top: -50px;
+      width: 200px;
+      &:nth-child(1) {
+        background: $theme-color;
+        animation: wave-button 2s infinite .1s linear backwards;
+      }
+      &:nth-child(2) {
+        background: $theme-color2;
+        animation: wave-button 3s infinite .5s linear backwards;
+      }
+      &:nth-child(3) {
+        animation: wave-button 4s infinite 1s linear backwards;
+        @include gradient-bg();
+      }
+    }
+  }
+}
+
+@keyframes wave-button {
+  0%{
+    opacity: 1;
+    transform: scale(.3)
+  }
+  50%{
+    opacity: .5;
+    transform: scale(.6)
+  }
+  100%{
+    opacity: 0;
+    transform: scale(1)
+  }
+}

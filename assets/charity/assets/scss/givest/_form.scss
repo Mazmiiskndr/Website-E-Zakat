@@ -1,0 +1,381 @@
+/*
+-----------------------------------------------------------------------
+	Form CSS
+-----------------------------------------------------------------------
+*/
+
+// Donation Form
+.donation-form {
+  padding: 75px 85px 78px 86px;
+  position: relative;
+  z-index: 1;
+  @media #{$sm-device} {
+    padding: 55px 35px 58px;
+  }
+  @media #{$xxs-device} {
+    padding: 55px 15px 50px;
+  }
+  .section-title {
+    margin-bottom: 40px;
+    .title {
+      font-size: 50px;
+      @media #{$xs-device} {
+        font-size: 30px;
+      }
+    }
+    .line-shape {
+      margin-top: 16px;
+    }
+  }
+  form {
+    .amount-info {
+      display: flex;
+      margin-bottom: 40px;
+      @media #{$xs-device} {
+        display: block;
+      }
+      .donate-amount {
+        background-color: $theme-color3;
+        border: 2px solid #203438;
+        color: $white;
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        height: 58px;
+        line-height: 58px;
+        margin-right: 20px;
+        min-width: 95px;
+        text-align: center;
+        @include transition(.3s);
+        @media #{$sm-device} {
+          min-width: 68px;
+        }
+        @media #{$xs-device} {
+          margin-bottom: 7px;
+          min-width: auto;
+          width: 100%;
+        }
+        &:hover, &.active {
+          border-color: $theme-color;
+          cursor: pointer;
+        }
+        &.donate-custom-amount {
+          max-width: 180px;
+          min-width: 180px;
+          margin-right: 0;
+          @media #{$xs-device} {
+            min-width: auto;
+            max-width: none;
+          }
+          .form-control {
+            background-color: $theme-color3;
+            border: none;
+            box-shadow: none;
+            color: $white;
+            font-size: 18px;
+            font-weight: $font-weight-semi-bold;
+            height: 100%;
+            padding: 2px 0px;
+            text-align: center;
+            @include placeholder {
+              color: $white;
+              font-size: 18px;
+              font-weight: $font-weight-bold;
+            }
+          }
+        }
+      }
+    }
+    .payment-method-wrp {
+      margin-bottom: 38px;
+      h4 {
+        color: $white;
+        font-size: 25px;
+        margin-bottom: 21px;
+      }
+      .payment-method {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        @media #{$sm-device} {
+          display: block;
+        }
+        .payment-type {
+          min-width: 223px;
+          .form-check {
+            margin-right: 27px;
+            @media #{$sm-device} {
+              margin-bottom: 15px;
+              margin-right: 0;
+            }
+            .form-check-input {
+              background-color: $white;
+              border: 6px solid #06323b;
+              box-shadow: none;
+              border-radius: 50%;
+              height: 21px;
+              margin-right: 12px;
+              width: 21px;
+              position: relative;
+              &:checked[type=radio] {
+                background-image: none;
+                background-color: $theme-color;
+              }
+            }
+            .form-check-label {
+              color: #8a8d8e;
+              font-size: 16px;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .personal-info {
+      margin-bottom: 40px;
+      h4 {
+        color: $white;
+        font-size: 25px;
+        margin-bottom: 25px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        .form-control {
+          background-color: $theme-color3;
+          border: 2px solid #203438;
+          border-radius: 0;
+          box-shadow: none;
+          color: $white;
+          font-size: 18px;
+          font-weight: $font-weight-normal;
+          height: 55px;
+          padding: 15px 20px;
+          @include placeholder {
+            color: #737f82;
+            font-size: 15px;
+            font-weight: $font-weight-normal;
+          }
+          &.textarea {
+            min-height: 140px;
+          }
+        }
+      }
+    }
+    .btn-gradient {
+      &.btn-border {
+        border-color: #203438;
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        min-width: 300px;
+        text-align: center;
+        @media #{$sm-device} {
+          font-size: 17px;
+          min-width: 230px;
+        }
+        @media #{$xs-device} {
+          font-size: 14px;
+          min-width: 150px;
+          padding: 17px 25px;
+        }
+        &:hover {
+          border-color: $theme-color2;
+        }
+      }
+    }
+    .btn-wrp {
+      display: flex;
+      @media #{$xs-device} {
+        display: block;
+      }
+      .btn-theme {
+        margin-left: 20px;
+        @media #{$xs-device} {
+          display: inline-block;
+          margin-left: 7px;
+          vertical-align: middle;
+        }
+        @media #{$xxs-device} {
+          margin-bottom: 8px;
+        }
+        &:first-child {
+          margin-left: 0;
+          @media #{$xs-device} {            
+            min-width: 150px;
+            padding: 17px 25px;
+            text-align: center;
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .layer-style {
+    .layer-style1 {
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+    .layer-style2 {
+      bottom: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
+// Volunteer Form Style
+.volunteer-form {
+  background-color: $white-f7;
+  padding: 146px 100px 150px;
+  @media #{$lg-device} {
+    padding: 95px 50px 100px;
+  }
+  @media #{$sm-device} {
+    padding: 70px 25px;
+  }
+  @media #{$xxs-device} {
+    padding: 70px 15px;
+  }
+  .section-title {
+    margin-bottom: 44px;
+    .title {
+      margin-bottom: 17px;
+      padding-right: 110px;
+      @media #{$md-device} {
+        padding-right: 0;
+      }
+      span {
+        background: none;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #939697;
+        -webkit-text-fill-color: unset;
+      }
+    }
+  }
+  .volunteer-form-wrapper {
+    .form-group {
+      margin-bottom: 20px;
+      .form-control {
+        background-color: transparent;
+        border: 2px solid #d7d7d7;
+        border-radius: 0;
+        box-shadow: none;
+        color: $theme-color3;
+        height: 55px;
+        padding: 20px 20px;
+        @include placeholder {
+          color: #737f82;
+        }
+        &:focus {
+          border-color: $theme-color3;
+        }
+        &.textarea {
+          margin-bottom: 39px;
+          min-height: 215px;
+        }
+      }
+    }
+  }
+}
+
+// Contact Form Style
+.contact-form {
+  .contact-form-wrapper {
+    .form-group {
+      margin-bottom: 20px;
+      .form-control {
+        background-color: transparent;
+        border: 2px solid #d7d7d7;
+        border-radius: 0;
+        color: $theme-color3;
+        font-size: 15px;
+        height: 55px;
+        padding: 14px 20px;
+        @include placeholder {
+          color: #737f82;
+          font-size: 15px;
+        }
+        &:focus {
+          border-color: $theme-color3;
+          box-shadow: none;
+          outline: none;
+        }
+        &.textarea {
+          min-height: 215px;
+        }
+      }
+      .btn-theme {
+        margin-top: 39px;
+      }
+    }
+  }
+}
+
+// Comment Form Style
+.comment-form {
+  .comment-form-content {
+    .form-group {
+      margin-bottom: 21px;
+      position: relative;
+      z-index: 1;
+      .form-control {
+        background-color: transparent;
+        border: 2px solid #d7d7d7;
+        border-radius: 0;
+        box-shadow: none;
+        color: $theme-color3;
+        font-size: 15px;
+        height: 55px;
+        padding: 10px 20px;
+        @include transition(.3s);
+        @include placeholder {
+          color: #737f82;
+          font-size: 15px;
+        }
+        &:focus {
+          border-bottom-color: $theme-color;
+        }
+        &.textarea {
+          height: 215px;
+        }
+      }
+    }
+  }
+}
+
+.form-message {
+  overflow: hidden;
+  @include transition(.3s);
+  button {
+    &.btn-close {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      float: right;
+      font-size: 14px;
+      margin-top: 0;
+      text-indent: 1000px;
+    }
+  }
+}
+
+.form-control {
+  &:focus {
+    @include placeholder {
+      color: transparent;
+      opacity: 0;
+    }
+  }
+}
+
